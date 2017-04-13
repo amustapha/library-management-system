@@ -1,0 +1,48 @@
+nav {
+  margin-top: 8px;
+  background: $ash;
+  a,  &>span {
+    text-decoration: none;
+    padding: 8px 32px;
+    display: inline-block;
+    color: $main-color-darker;
+    margin: 0 3px;
+    @include transition(all);
+    @include transition-duration(.5s);
+    @include transition-timing-function(linear);
+
+    &:after {
+      content: $double-gt;
+      position: absolute;
+      right: 0;
+      margin-right: -10px;
+      color: $main-color-darker;
+    }
+
+    &:before {
+      position: absolute;
+      left: 0;
+      margin-left: 12px;
+    }
+
+    &:last-of-type:after {
+      content: "";
+    }
+  }
+  a {
+    &:hover {
+      color: $main-color-lighter;
+      background: $dark-ash;
+    }
+
+    &:first-of-type {
+      margin-left: 0;
+      padding: 8px ;
+    }
+  }
+
+}
+
+
+
+

@@ -1,0 +1,209 @@
+@import "bourbon/bourbon";
+@import "font-icons";
+@import "bootstrap";
+@import "variables";
+@import "components/nav";
+@import "components/form";
+@import "components/table";
+
+body{
+
+}
+
+
+header{
+  display: block;
+  width: 100%;
+  background: $light-ash;
+  box-shadow: 0 2px 2px #aaa;
+  padding-top: 4px;
+
+  h2{
+    padding-left: 8px;
+    font-size: 2.4em;
+    color: $alt-color;
+  }
+
+  h2:before{
+    font-weight: normal;
+  }
+
+  img, h2{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+
+main{
+  margin: 16px auto 8px;
+  width: 1024px;
+  background: #ffffff;
+
+  aside{
+    float: right;
+    width: 320px;
+    border-top: 4px solid;
+    border-top-color: $alt-color;
+    box-shadow: 0 0 2px #444;
+
+    h2{
+      font-size: .95em;
+      margin: 4px 0;
+      text-align: center;
+      color: $alt-color;
+    }
+    a{
+      font-size: 1em;
+      text-decoration: none;
+      color: $alt-color;
+    }
+  }
+
+  article{
+    float: left;
+    width: 696px;
+  }
+}
+
+.info{
+  background: #fff9c4;
+  padding: 8px;
+  font-size: .75em;
+  font-style: italic;
+  margin: 4px;
+  @include border-left-radius(4px);
+  @include border-right-radius(4px);
+
+  &:before{
+    content: "\ea08";
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-size: 1.8em;
+    margin-bottom: .3em;
+    color: $main-color-dark;
+  }
+}
+
+.success, .error{
+  padding: 8px 8px 8px 28px ;
+  font-size: .75em;
+  font-style: italic;
+  margin: 4px;
+  @include border-left-radius(4px);
+  @include border-right-radius(4px);
+
+  &:before{
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    font-style: normal;
+    font-size: 1.8em;
+  }
+}
+
+.error{
+  background: #ffcdd2;
+  border: 1px solid #d50000;
+  color: #d50000;
+
+  &:before{
+    content: '\ea0d';
+  }
+}
+
+.success{
+  background: #c8e6c9;
+  border: 1px solid #388e3c;
+  color: #388e3c;
+
+  &:before{
+    content: '\ea10';
+  }
+}
+
+.create{
+  font-size: .65em;
+  color: $deep-ash;
+  text-align: center;
+  margin: 16px 0;
+}
+
+.carousel img{
+  height: 460px;
+  width: 100%;
+}
+
+.slick-dots{
+  z-index: 10;
+}
+
+section{
+  width: 100%;
+  background: #fff;
+  padding: 4px 0;
+
+  h1{
+    font-size: 2em;
+
+    text-transform: uppercase;
+  }
+}
+
+.book, .delete, .edit{
+  @include border-right-radius(4px);
+  @include border-left-radius(4px);
+  color: $dark-ash;
+  text-decoration: none;
+  padding: 1px 4px 2px;
+  font-size: 1.3em;
+  margin: 0;
+  text-align: center;
+  @include transition(all);
+  @include transition-duration(.35s);
+
+  &:before {
+    font-size: .85em;
+  }
+
+  &:hover{
+    color: $deep-ash;
+  }
+}
+
+.book:before{
+  content: $calendar;
+}
+
+.delete:before{
+  content: $delete;
+}
+
+.edit:before{
+  content: $pen;
+}
+
+b{
+  width: 192px;
+  display: inline-block;
+  text-align: right;
+  padding-right: 8px;
+}
+
+li b:before{
+  padding-right: 4px;
+  font-weight: normal;
+}
+
+li{
+  display: block;
+  padding: 8px 0;
+}
+
+
+
+
+
+@import "libs/slick";
+@import "libs/slick-theme";

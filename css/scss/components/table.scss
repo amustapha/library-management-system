@@ -1,0 +1,78 @@
+article, section {
+  table {
+    width: calc(100% - 2px);
+    margin: 4px 1px;
+    border: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    vertical-align: middle;
+    background: #fff;
+
+    * {
+      border-color: #90a4ae !important;
+    }
+
+    * {
+      font-size: .9em;
+      border: 0;
+
+    }
+    thead {
+      background: $alt-color;
+      padding: 4px;
+      color: $main-color-lighter;
+      font-size: 1.1em;
+    }
+
+    tr {
+      border-spacing: 0;
+      border: 0;
+      border-bottom: 1px solid $main-color-lighter;
+    }
+
+    th {
+      text-transform: capitalize;
+      border: 0;
+      border-spacing: 0;
+    }
+
+    td, th {
+      border-width: 1px 0 0 1px;
+      border-style: solid;
+      padding: 4px;
+    }
+
+    td:last-of-type,
+    th:last-of-type {
+      border-right: 1px solid;
+    }
+
+    tbody {
+      font-size: .9em;
+
+      tr:nth-child(even) {
+        background: #eceff1;
+      }
+
+      tr:last-of-type td {
+        border-bottom: 1px solid;
+      }
+
+    }
+  }
+
+  .table {
+    display: table;
+    width: 100%;
+  }
+
+  .row {
+    display: table-row;
+  }
+
+  .cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+}

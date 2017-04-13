@@ -1,0 +1,23 @@
+@include font-face("Dosis", "../fonts/icomoon");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Dosis;
+  position: relative;
+  font-size: 12pt;
+}
+
+.clear-fix{
+  clear: both;
+}
+
+ul.normalize{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.inline li{
+  display: inline-block;
+}

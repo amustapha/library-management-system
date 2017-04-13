@@ -1,0 +1,42 @@
+-- DROP DATABASE IF EXISTS library;
+CREATE DATABASE IF NOT EXISTS library;
+USE library;
+
+CREATE TABLE IF NOT EXISTS users(
+  id INT NOT NULL AUTO_INCREMENT,
+  fullname VARCHAR (255) NOT NULL,
+  email VARCHAR (255) NOT NULL,
+  username VARCHAR (255) NOT NULL,
+  role VARCHAR (255) NOT NULL,
+  password VARCHAR (255) NOT NULL,
+
+
+
+  PRIMARY KEY(id),
+  UNIQUE KEY(username)
+)ENGINE=INNODB;
+
+CREATE TABLE IF NOT EXISTS books(
+  id INT NOT NULL AUTO_INCREMENT,
+  book_title VARCHAR (255) NOT NULL,
+  author VARCHAR (255) NOT NULL,
+  publisher VARCHAR (255) NOT NULL,
+  isbn VARCHAR (255) NOT NULL,
+  publication_year VARCHAR (255) NOT NULL,
+  available_copies INT NOT NULL,
+
+
+  PRIMARY KEY(id),
+  UNIQUE KEY(isbn)
+)ENGINE = innodb;
+
+CREATE TABLE IF NOT EXISTS borrow(
+  id INT NOT NULL AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  book_id INT NOT NULL ,
+  start_date VARCHAR(255) NOT NULL ,
+  duration INT NOT NULL ,
+
+  PRIMARY KEY (id),
+  UNIQUE KEY(user_id, book_id, start_date)
+)ENGINE = INNODB;

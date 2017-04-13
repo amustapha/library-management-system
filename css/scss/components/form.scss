@@ -1,0 +1,123 @@
+form {
+  display: block;
+  margin: 0;
+  padding: 4px;
+
+  label {
+    margin: 4px 0;
+  }
+
+  input[type=text],
+  input[type=email],
+  input[type=password],
+  input[type=search],
+  input[type=number],
+  input[type=tel],
+  input[type=date],
+  select,
+  textarea {
+    background: transparent;
+    box-sizing: border-box;
+    border: 0px;
+    height: auto;
+    font-size: .8em;
+    vertical-align: middle;
+    margin-bottom: 2px;
+    padding-left: 4px;
+    width: calc(100% - 28px);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    resize: none;
+  }
+
+  textarea {
+    width: calc(100% - 6px);
+    height: 400px;
+  }
+
+  .drop:after {
+    content: ">"; //todo chevron icon
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $ash;
+    margin-right: 8px;
+    margin-top: 12px;
+    @include transition(all);
+    @include transition-duration(.2s);
+  }
+
+  .drop:hover:after {
+    @include transform(rotate(180deg));
+  }
+
+  label:before {
+
+    color: $black;
+    text-transform: full-size-kana;
+    font-size: 1.15em;
+    line-height: .4em;
+
+  }
+
+  form {
+    width: 100%;
+  }
+
+  label {
+    border: 1px solid $ash;
+    @include border-right-radius(4px);
+    @include border-left-radius(4px);
+    //margin: 4px 0 12px;
+    padding: 10px 4px 6px;
+    width: 100%;
+    display: block;
+    position: relative;
+
+    em {
+      font-style: normal;
+      position: absolute;
+      z-index: 1;
+      color: #aaa;
+      font-size: .9em;
+      left: 0;
+      top: 0;
+      margin-left: 26px;
+      margin-top: 12px;
+      @include transition(all);
+      @include transition-duration(.4s);
+    }
+
+    .filled {
+      font-size: .55em;
+      margin: 2px;
+      color: $black;
+      font-weight: bold;
+    }
+  }
+
+  label:hover,
+  label:focus,
+  label:active,
+  input:active,
+  input:focus,
+  textarea:focus {
+    ~ em,
+    em {
+      color: $black;
+      font-weight: bold;
+      font-size: .55em;
+      margin: 2px;
+    }
+  }
+
+  button {
+    @include button(flat, $alt-color, .85em, 7px 24px);
+    float: right;
+  }
+}
+
+
